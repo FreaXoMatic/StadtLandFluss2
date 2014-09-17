@@ -94,7 +94,9 @@ namespace StadtLandFluss
                elementPlayer.points += checkEntry(txtStadt,elementPlayer);
                elementPlayer.playerTxtStadt = txtStadt.Text;
                elementPlayer.points += checkEntry(txtLand,elementPlayer);
+               elementPlayer.playerTxTLand = txtLand.Text;
                elementPlayer.points += checkEntry(txtFluss,elementPlayer);
+               elementPlayer.playerTxTFluss = txtFluss.Text;
 
                elementPlayer.allPoints += elementPlayer.points;
                elementPlayer.fillStats(round);
