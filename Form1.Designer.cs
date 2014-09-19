@@ -130,6 +130,7 @@
             // 
             // Stats
             // 
+            this.Stats.Enabled = false;
             this.Stats.Location = new System.Drawing.Point(13, 246);
             this.Stats.Name = "Stats";
             this.Stats.Size = new System.Drawing.Size(75, 23);
@@ -159,7 +160,7 @@
             // playerToolStripMenuItem
             // 
             this.playerToolStripMenuItem.Name = "playerToolStripMenuItem";
-            this.playerToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.playerToolStripMenuItem.Size = new System.Drawing.Size(106, 22);
             this.playerToolStripMenuItem.Text = "Player";
             this.playerToolStripMenuItem.Click += new System.EventHandler(this.playerToolStripMenuItem_Click);
             // 

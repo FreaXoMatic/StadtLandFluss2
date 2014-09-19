@@ -67,6 +67,7 @@ namespace StadtLandFluss
             
             lblBuchstabe.Text = "Buchstabe: ?";
             txtStart.Enabled = true;
+            Stats.Enabled = true;
             txtEnd.Enabled = false;
 
             txtFluss.Enabled = false;
@@ -95,12 +96,12 @@ namespace StadtLandFluss
                elementPlayer.points += checkEntry(txtStadt,elementPlayer);
                elementPlayer.playerTxtStadt = txtStadt.Text;
                elementPlayer.points += checkEntry(txtLand,elementPlayer);
-               elementPlayer.playerTxTLand = txtLand.Text;
+               elementPlayer.playerTxtLand = txtLand.Text;
                elementPlayer.points += checkEntry(txtFluss,elementPlayer);
-               elementPlayer.playerTxTFluss = txtFluss.Text;
+               elementPlayer.playerTxtFluss = txtFluss.Text;
 
                elementPlayer.allPoints += elementPlayer.points;
-               elementPlayer.fillStats(round);
+               elementPlayer.fillStats();
            }
             
             
@@ -180,7 +181,7 @@ namespace StadtLandFluss
         {
             foreach (Player elementPlayer in playerAll)
             {
-                elementPlayer.displayStats();  
+                elementPlayer.displayStats(round);  
             }
         }
 
