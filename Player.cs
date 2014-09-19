@@ -39,7 +39,9 @@ namespace StadtLandFluss
         public void displayStats()
         {
             int lvRoundCount = 1;
-            MessageBox.Show("Spieler:" + this.playerNickname + "\nRunde: " + lvRoundCount + "\n" + this.statsList[0, 0] + ": " + this.statsList[0, 1] + "\n" + this.statsList[1, 0] + ": " + this.statsList[1, 1] + "\n" + "\n" + this.statsList[2, 0] + ": " + this.statsList[2, 1] + "\n");
+            MessageBox.Show("Spieler:" + this.playerNickname + "\nRunde: " + lvRoundCount + "\n" + this.statsList[0, 0] 
+                + ": " + this.statsList[0, 1] + "\n" + this.statsList[1, 0] + ": " + this.statsList[1, 1] + "\n"
+                + this.statsList[2, 0] + ": " + this.statsList[2, 1] + "\n");
         }
 
 

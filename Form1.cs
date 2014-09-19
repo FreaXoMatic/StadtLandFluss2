@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -112,7 +113,7 @@ namespace StadtLandFluss
             if (textField.Text.Substring(0, 1).ToUpper() == Char.ToString(start_Buchstabe).ToUpper())
             {
                 
-                DialogResult Result = MessageBox.Show("Echtes Wort? \nStadt: " + textField.Text, "Bewertung ", MessageBoxButtons.YesNo);
+                DialogResult Result = MessageBox.Show("Echtes Wort? \nStadt: " + textField.Text, "Bewertung für Spieler: "+loPlayer.playerNickname, MessageBoxButtons.YesNo);
                 if (Result == DialogResult.Yes)
                 {
               
@@ -181,6 +182,13 @@ namespace StadtLandFluss
             {
                 elementPlayer.displayStats();  
             }
+        }
+
+        private void playerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            Player Player3 = new Player("Ruben2");
+            
         }
 
 
