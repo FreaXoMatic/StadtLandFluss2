@@ -14,8 +14,12 @@ namespace StadtLandFluss
     public partial class Form1 : Form
     {
         int playerCount = 0;
-     
-        Player[] playerAll = new Player[2];
+        List<Player> playerLista = new List<Player>();
+
+        
+
+        
+
 
 
 
@@ -30,6 +34,7 @@ namespace StadtLandFluss
 
         private void txtStart_Click(object sender, EventArgs e)
         {
+           
             startGame();
         }
         
@@ -90,19 +95,19 @@ namespace StadtLandFluss
             //    lvPlayer.points += checkEntry(txtLand);
             //    lvPlayer.points += checkEntry(txtFluss);
             //}
-           foreach(Player elementPlayer in playerAll)
-           {
-               elementPlayer.points = 0;
-               elementPlayer.points += checkEntry(txtStadt,elementPlayer);
-               elementPlayer.playerTxtStadt = txtStadt.Text;
-               elementPlayer.points += checkEntry(txtLand,elementPlayer);
-               elementPlayer.playerTxtLand = txtLand.Text;
-               elementPlayer.points += checkEntry(txtFluss,elementPlayer);
-               elementPlayer.playerTxtFluss = txtFluss.Text;
+            playerLista.ForEach(delegate(Player elementPlayerA)
+            {
+                elementPlayerA.points = 0;
+                elementPlayerA.points += checkEntry(txtStadt, elementPlayerA);
+                elementPlayerA.playerTxtStadt = txtStadt.Text;
+                elementPlayerA.points += checkEntry(txtLand, elementPlayerA);
+                elementPlayerA.playerTxtLand = txtLand.Text;
+                elementPlayerA.points += checkEntry(txtFluss, elementPlayerA);
+                elementPlayerA.playerTxtFluss = txtFluss.Text;
 
-               elementPlayer.allPoints += elementPlayer.points;
-               elementPlayer.fillStats();
-           }
+                elementPlayerA.allPoints += elementPlayerA.points;
+                elementPlayerA.fillStats();
+            });
             
             
 
@@ -143,10 +148,10 @@ namespace StadtLandFluss
         {
             
             countPoints();
-            foreach(Player elementPlayer in playerAll )
+            playerLista.ForEach(delegate(Player elementPlayer)
             {
-                MessageBox.Show("Spieler: " + elementPlayer.playerNickname + "\n Punkte von dieser Runde: " + elementPlayer.points+"\n Punkte Gesamt: "+ elementPlayer.allPoints);
-            }
+                MessageBox.Show("Spieler: " + elementPlayer.playerNickname + "\n Punkte von dieser Runde: " + elementPlayer.points + "\n Punkte Gesamt: " + elementPlayer.allPoints);
+            });
             
             endGame();
         }
@@ -168,29 +173,36 @@ namespace StadtLandFluss
         private void Form1_Load(object sender, EventArgs e)
         {
 
-            for (int i2 = 0; i2 < 2; i2++)
-            {
-                string lvShortName = "Ruben" + i2.ToString();
-                playerAll[i2] = new Player(lvShortName);
-            }
+            //for (int i2 = 0; i2 < 2; i2++)
+            //{
+            //    string lvShortName = "Ruben" + i2.ToString();
+            //    playerAll[i2] = new Player(lvShortName);
+            //}
         
             
         }
 
         private void Stats_Click(object sender, EventArgs e)
         {
-            foreach (Player elementPlayer in playerAll)
+            playerLista.ForEach(delegate(Player elementPlayer)
             {
-                elementPlayer.displayStats(round);  
-            }
+                elementPlayer.displayStats(round);
+            });
         }
 
         private void playerToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            playerLista.Add(new Player("Ruben"+playerCount.ToString())
+            {
+            });
 
-            Player Player3 = new Player("Ruben2");
-            
+            //Player fluffPlayer = new Player("fluff");
+            //Player fluffPlayer = playerLista.Items;
+            //MessageBox("Neuer Spieler:"+fluffPlayer.playerNickname);
+            playerCount++;
         }
+
+
 
 
         

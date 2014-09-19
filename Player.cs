@@ -12,14 +12,17 @@ namespace StadtLandFluss
 
     public class Player
     {
-        public string playerNickname;
+        public string playerNickname { get; set; }
         public string playerTxtStadt;
         public string playerTxtLand;
         public string playerTxtFluss;
         public string[,] statsList;
         public List<StatsList> statsList2 = new List<StatsList>();
+
         
-  
+        
+        
+
 
 
         public int points;
