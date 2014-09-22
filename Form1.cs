@@ -15,7 +15,7 @@ namespace StadtLandFluss
     {
         int playerCount = 0;
         List<Player> playerLista = new List<Player>();
-
+        bool firstTime = true;
         
 
         
@@ -52,6 +52,7 @@ namespace StadtLandFluss
         public void startGame()
         {
             round++;
+            lblRound.Text = "Runde: " + round;
             start_Buchstabe = RandomLetter.GetLetter();
             lblBuchstabe.Text = "Buchstabe: "+Char.ToString(start_Buchstabe);
 
@@ -200,6 +201,13 @@ namespace StadtLandFluss
             //Player fluffPlayer = playerLista.Items;
             //MessageBox("Neuer Spieler:"+fluffPlayer.playerNickname);
             playerCount++;
+            lblPlayer.Text = "Spieler Anzahl: " + playerCount;
+            if(firstTime == true)
+            {
+                txtStart.Enabled = true;
+                firstTime = false;
+            }
+
         }
 
 

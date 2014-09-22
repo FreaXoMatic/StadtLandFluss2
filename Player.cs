@@ -49,9 +49,11 @@ namespace StadtLandFluss
 
         public void displayStats(int lvRoundCount)
         {
-            for (int ia = 0; ia >= 1-lvRoundCount;ia++)
-            {
-                StatsList loStatsList = this.statsList2[ia];
+            StatsList loStatsList;
+            lvRoundCount--;    
+            for (int ia = 0; ia <= lvRoundCount;ia++)
+            {                
+                loStatsList = this.statsList2[ia];
                 string lvStadt = loStatsList.stadtClass;
                 string lvLand = loStatsList.landClass;
                 string lvFluss = loStatsList.flussClass;

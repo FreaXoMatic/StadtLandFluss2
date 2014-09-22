@@ -41,11 +41,14 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.playerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblRound = new System.Windows.Forms.Label();
+            this.lblPlayer = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtStart
             // 
+            this.txtStart.Enabled = false;
             this.txtStart.Location = new System.Drawing.Point(13, 195);
             this.txtStart.Name = "txtStart";
             this.txtStart.Size = new System.Drawing.Size(75, 23);
@@ -164,11 +167,31 @@
             this.playerToolStripMenuItem.Text = "Player";
             this.playerToolStripMenuItem.Click += new System.EventHandler(this.playerToolStripMenuItem_Click);
             // 
+            // lblRound
+            // 
+            this.lblRound.AutoSize = true;
+            this.lblRound.Location = new System.Drawing.Point(16, 44);
+            this.lblRound.Name = "lblRound";
+            this.lblRound.Size = new System.Drawing.Size(45, 13);
+            this.lblRound.TabIndex = 11;
+            this.lblRound.Text = "Runde: ";
+            // 
+            // lblPlayer
+            // 
+            this.lblPlayer.AutoSize = true;
+            this.lblPlayer.Location = new System.Drawing.Point(105, 27);
+            this.lblPlayer.Name = "lblPlayer";
+            this.lblPlayer.Size = new System.Drawing.Size(77, 13);
+            this.lblPlayer.TabIndex = 12;
+            this.lblPlayer.Text = "Spieler Anzahl:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(877, 390);
+            this.Controls.Add(this.lblPlayer);
+            this.Controls.Add(this.lblRound);
             this.Controls.Add(this.Stats);
             this.Controls.Add(this.lblBuchstabe);
             this.Controls.Add(this.txtEnd);
@@ -206,6 +229,8 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem playerToolStripMenuItem;
+        private System.Windows.Forms.Label lblRound;
+        private System.Windows.Forms.Label lblPlayer;
     }
 }
 
