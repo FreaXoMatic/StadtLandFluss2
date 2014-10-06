@@ -18,6 +18,13 @@ namespace StadtLandFluss
         public string playerTxtFluss;
         public string[,] statsList;
         public List<StatsList> statsList2 = new List<StatsList>();
+
+        
+        
+        
+
+
+
         public int points;
         public int allPoints;
         

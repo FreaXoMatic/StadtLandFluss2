@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.txtStart = new System.Windows.Forms.Button();
             this.txtStadt = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,17 +43,13 @@
             this.playerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblRound = new System.Windows.Forms.Label();
             this.lblPlayer = new System.Windows.Forms.Label();
-            this.playerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.lblTimer = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.playerBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // txtStart
             // 
             this.txtStart.Enabled = false;
-            this.txtStart.Location = new System.Drawing.Point(13, 126);
+            this.txtStart.Location = new System.Drawing.Point(13, 195);
             this.txtStart.Name = "txtStart";
             this.txtStart.Size = new System.Drawing.Size(75, 23);
             this.txtStart.TabIndex = 0;
@@ -74,7 +69,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(10, 81);
+            this.label1.Location = new System.Drawing.Point(13, 81);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(32, 13);
             this.label1.TabIndex = 2;
@@ -83,7 +78,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(116, 81);
+            this.label2.Location = new System.Drawing.Point(119, 81);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(31, 13);
             this.label2.TabIndex = 4;
@@ -130,7 +125,7 @@
             // lblBuchstabe
             // 
             this.lblBuchstabe.AutoSize = true;
-            this.lblBuchstabe.Location = new System.Drawing.Point(10, 27);
+            this.lblBuchstabe.Location = new System.Drawing.Point(16, 27);
             this.lblBuchstabe.Name = "lblBuchstabe";
             this.lblBuchstabe.Size = new System.Drawing.Size(61, 13);
             this.lblBuchstabe.TabIndex = 8;
@@ -139,7 +134,7 @@
             // Stats
             // 
             this.Stats.Enabled = false;
-            this.Stats.Location = new System.Drawing.Point(13, 155);
+            this.Stats.Location = new System.Drawing.Point(13, 246);
             this.Stats.Name = "Stats";
             this.Stats.Size = new System.Drawing.Size(75, 23);
             this.Stats.TabIndex = 9;
@@ -153,7 +148,7 @@
             this.newToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(432, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(877, 24);
             this.menuStrip1.TabIndex = 10;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -175,7 +170,7 @@
             // lblRound
             // 
             this.lblRound.AutoSize = true;
-            this.lblRound.Location = new System.Drawing.Point(10, 40);
+            this.lblRound.Location = new System.Drawing.Point(16, 44);
             this.lblRound.Name = "lblRound";
             this.lblRound.Size = new System.Drawing.Size(45, 13);
             this.lblRound.TabIndex = 11;
@@ -184,35 +179,17 @@
             // lblPlayer
             // 
             this.lblPlayer.AutoSize = true;
-            this.lblPlayer.Location = new System.Drawing.Point(116, 27);
+            this.lblPlayer.Location = new System.Drawing.Point(105, 27);
             this.lblPlayer.Name = "lblPlayer";
             this.lblPlayer.Size = new System.Drawing.Size(77, 13);
             this.lblPlayer.TabIndex = 12;
             this.lblPlayer.Text = "Spieler Anzahl:";
             // 
-            // playerBindingSource
-            // 
-            this.playerBindingSource.DataSource = typeof(StadtLandFluss.Player);
-            // 
-            // timer2
-            // 
-            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
-            // 
-            // lblTimer
-            // 
-            this.lblTimer.AutoSize = true;
-            this.lblTimer.Location = new System.Drawing.Point(116, 40);
-            this.lblTimer.Name = "lblTimer";
-            this.lblTimer.Size = new System.Drawing.Size(30, 13);
-            this.lblTimer.TabIndex = 13;
-            this.lblTimer.Text = "Time";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(432, 191);
-            this.Controls.Add(this.lblTimer);
+            this.ClientSize = new System.Drawing.Size(877, 390);
             this.Controls.Add(this.lblPlayer);
             this.Controls.Add(this.lblRound);
             this.Controls.Add(this.Stats);
@@ -232,7 +209,6 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.playerBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -255,9 +231,6 @@
         private System.Windows.Forms.ToolStripMenuItem playerToolStripMenuItem;
         private System.Windows.Forms.Label lblRound;
         private System.Windows.Forms.Label lblPlayer;
-        private System.Windows.Forms.BindingSource playerBindingSource;
-        private System.Windows.Forms.Timer timer2;
-        private System.Windows.Forms.Label lblTimer;
     }
 }
 
