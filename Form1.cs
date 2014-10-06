@@ -8,15 +8,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
+using System.Web;
 
 namespace StadtLandFluss
 {
     public partial class Form1 : Form
     {
         int playerCount = 0;
-        List<Player> playerLista = new List<Player>();
+        public static List<Player> playerLista = new List<Player>();
         bool firstTime = true;
-        
+        Stopwatch timer1 = new Stopwatch();
+        public static Player dummyPlayer = new Player("dummy");
 
         
 
@@ -51,6 +54,8 @@ namespace StadtLandFluss
 
         public void startGame()
         {
+            timer1.Restart();
+            timer2.Start();
             round++;
             lblRound.Text = "Runde: " + round;
             start_Buchstabe = RandomLetter.GetLetter();
@@ -58,6 +63,7 @@ namespace StadtLandFluss
 
             txtStart.Enabled = false;
             txtEnd.Enabled = false;
+            Stats.Enabled = false;
 
             txtFluss.Enabled = true;
             txtLand.Enabled = true;
@@ -147,7 +153,8 @@ namespace StadtLandFluss
 
         private void txtEnd_Click(object sender, EventArgs e)
         {
-            
+            timer1.Stop();
+            timer2.Stop();
             countPoints();
             playerLista.ForEach(delegate(Player elementPlayer)
             {
@@ -193,23 +200,50 @@ namespace StadtLandFluss
 
         private void playerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            playerLista.Add(new Player("Ruben"+playerCount.ToString())
+            EditPlayer lfEditPlayer = new EditPlayer();
+
+
+            if (lfEditPlayer.ShowDialog() == DialogResult.OK)
             {
-            });
+                //playerLista.Add(dummyPlayer)
+
+                playerLista.Add(new Player(dummyPlayer.playerNickname)
+                {
+                });
+                playerCount++;
+                lblPlayer.Text = "Spieler Anzahl: " + playerCount;
+                if (firstTime == true)
+                {
+                    txtStart.Enabled = true;
+                    firstTime = false;
+                }
+            }
+
+
+
+            
 
             //Player fluffPlayer = new Player("fluff");
             //Player fluffPlayer = playerLista.Items;
             //MessageBox("Neuer Spieler:"+fluffPlayer.playerNickname);
-            playerCount++;
-            lblPlayer.Text = "Spieler Anzahl: " + playerCount;
-            if(firstTime == true)
-            {
-                txtStart.Enabled = true;
-                firstTime = false;
-            }
+            
 
         }
 
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            updateLabel();
+        }
+
+        private void updateLabel()
+        {
+            TimeSpan ts = timer1.Elapsed;
+            string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}.{3:00}",
+            ts.Hours, ts.Minutes, ts.Seconds,
+            ts.Milliseconds / 10);
+
+            lblTimer.Text = "Zeit: "+elapsedTime;
+        }
 
 
 
