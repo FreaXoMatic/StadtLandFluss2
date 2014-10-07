@@ -10,3 +10,6 @@ C:\Users\Azubi\documents\visual studio 2013\Projects\StadtLandFluss\StadtLandFlu
 C:\Users\Azubi\documents\visual studio 2013\Projects\StadtLandFluss\StadtLandFluss\obj\Debug\StadtLandFluss.Connect.resources
 C:\Users\Azubi\documents\visual studio 2013\Projects\StadtLandFluss\StadtLandFluss\obj\Debug\StadtLandFluss.EditPlayer.resources
 C:\Users\Azubi\documents\visual studio 2013\Projects\StadtLandFluss\StadtLandFluss\obj\Debug\StadtLandFluss.Checkpoints.resources
+C:\Users\Azubi\documents\visual studio 2013\Projects\StadtLandFluss\StadtLandFluss\obj\Debug\StadtLandFluss.LoginForm.resources
+C:\Users\Azubi\documents\visual studio 2013\Projects\StadtLandFluss\StadtLandFluss\obj\Debug\StadtLandFluss.PeerToPeerChat.resources
+C:\Users\Azubi\documents\visual studio 2013\Projects\StadtLandFluss\StadtLandFluss\obj\Debug\StadtLandFluss.ChatForm.resources

@@ -47,6 +47,7 @@
             this.playerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.lblTimer = new System.Windows.Forms.Label();
+            this.chatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.playerBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -150,7 +151,8 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.newToolStripMenuItem});
+            this.newToolStripMenuItem,
+            this.chatToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(432, 24);
@@ -207,6 +209,13 @@
             this.lblTimer.TabIndex = 13;
             this.lblTimer.Text = "Time";
             // 
+            // chatToolStripMenuItem
+            // 
+            this.chatToolStripMenuItem.Name = "chatToolStripMenuItem";
+            this.chatToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.chatToolStripMenuItem.Text = "Chat";
+            this.chatToolStripMenuItem.Click += new System.EventHandler(this.chatToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -258,6 +267,7 @@
         private System.Windows.Forms.BindingSource playerBindingSource;
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Label lblTimer;
+        private System.Windows.Forms.ToolStripMenuItem chatToolStripMenuItem;
     }
 }
 

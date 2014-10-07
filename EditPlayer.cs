@@ -26,7 +26,7 @@ namespace StadtLandFluss
         private void btnOk_Click(object sender, EventArgs e)
         {
             lvName = txtName.Text;
-            int lvCount;
+            //int lvCount;
             Form1.dummyPlayer.playerNickname = lvName;
             if(0 != Form1.playerLista.Count())
             {
@@ -46,10 +46,6 @@ namespace StadtLandFluss
             }
         }
 
-        internal static void ActiveForm()
-        {
-            throw new NotImplementedException();
-        }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {

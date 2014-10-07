@@ -33,7 +33,7 @@ namespace StadtLandFluss
 
         int round = 0;
         char start_Buchstabe;
-        int points;
+        //int points;
 
         private void txtStart_Click(object sender, EventArgs e)
         {
@@ -243,6 +243,17 @@ namespace StadtLandFluss
             ts.Milliseconds / 10);
 
             lblTimer.Text = "Zeit: "+elapsedTime;
+        }
+
+        private void chatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           // PeerToPeerChat peertopeerchat = new PeerToPeerChat();
+           //
+           // peertopeerchat.ShowDialog();
+
+            ChatForm chatformopen = new ChatForm();
+
+            chatformopen.Show();
         }
 
 
