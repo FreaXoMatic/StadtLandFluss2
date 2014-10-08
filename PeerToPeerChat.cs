@@ -23,8 +23,8 @@ namespace StadtLandFluss
         {
             InitializeComponent();
 
-            this.FormClosing += new FormClosingEventHandler(LoginForm_FormClosing);
-            btnOK.Click += new EventHandler(btnOK_Click);
+            //this.FormClosing += new FormClosingEventHandler(LoginForm_FormClosing);
+            //btnOK.Click += new EventHandler(btnOK_Click);
         }
 
         void btnOK_Click(object sender, EventArgs e)

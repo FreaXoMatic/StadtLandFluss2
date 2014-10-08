@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net;
 
 
 namespace StadtLandFluss
@@ -20,6 +21,7 @@ namespace StadtLandFluss
         public List<StatsList> statsList2 = new List<StatsList>();
         public int points;
         public int allPoints;
+        public string ip;
         
         public Player(string nn)
         {
@@ -55,6 +57,18 @@ namespace StadtLandFluss
             }
 
           
+        }
+
+        public void setIp()
+        {
+           // string str = "";
+            //System.Net.Dns.GetHostName();
+            //IPHostEntry ipEntry = System.Net.Dns.GetHostEntry(str);
+            //IPAddress[] addr = ipEntry.AddressList;
+            //
+            //this.ip = addr[addr.Length - 1].ToString(); 
+
+            this.ip = Dns.GetHostEntry(Dns.GetHostName()).AddressList[2].ToString();
         }
 
 

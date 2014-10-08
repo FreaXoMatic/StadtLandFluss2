@@ -206,7 +206,8 @@ namespace StadtLandFluss
             if (lfEditPlayer.ShowDialog() == DialogResult.OK)
             {
                 //playerLista.Add(dummyPlayer)
-
+                MessageBox.Show(dummyPlayer.ip);
+                
                 playerLista.Add(new Player(dummyPlayer.playerNickname)
                 {
                 });

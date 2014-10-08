@@ -17,7 +17,7 @@ namespace StadtLandFluss
     public partial class ChatForm : Form
     {
         delegate void AddMessage(string message);
-        string userName;
+        string userName = "";
 
         const int port = 54545;
         const string broadcastAddress = "255.255.255.255";
@@ -32,8 +32,8 @@ namespace StadtLandFluss
         {
             InitializeComponent();
 
-            this.Load += new EventHandler(ChatForm_Load);
-            btnSend.Click += new EventHandler(btnSend_Click);
+            //this.Load += new EventHandler(ChatForm_Load);
+            //btnSend.Click += new EventHandler(btnSend_Click);
         }
 
         private void ChatForm_Load(object sender, EventArgs e)
@@ -44,12 +44,12 @@ namespace StadtLandFluss
             {
                 loginForm2.ShowDialog();
                 if (loginForm2.UserName == "")
-                    this.Close();
-                //else
-                //{
-                //    userName = loginForm2.UserName;
-                //    this.Show();
-                //}
+                    loginForm2.Close();
+                else
+                {
+                    userName = loginForm2.UserName;
+                    this.Show();
+                }
             }
             tbSend.Focus();
 
@@ -104,6 +104,11 @@ namespace StadtLandFluss
         private void MessageReceived(string message)
         {
             rtbChat.Text += message + "\n";
+        }
+
+        private void ChatForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            userName = "";
         }
     }
 }

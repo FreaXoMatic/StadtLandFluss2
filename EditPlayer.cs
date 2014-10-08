@@ -28,6 +28,7 @@ namespace StadtLandFluss
             lvName = txtName.Text;
             //int lvCount;
             Form1.dummyPlayer.playerNickname = lvName;
+            Form1.dummyPlayer.setIp();
             if(0 != Form1.playerLista.Count())
             {
                 Form1.playerLista.ForEach(delegate(Player elementPlayer)
@@ -62,6 +63,11 @@ namespace StadtLandFluss
             {
                 btnOk.Enabled = false;
             }
+        }
+
+        private void EditPlayer_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

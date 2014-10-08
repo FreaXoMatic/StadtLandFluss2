@@ -83,6 +83,7 @@
             this.Controls.Add(this.btnOk);
             this.Name = "EditPlayer";
             this.Text = "Spieler Eintragen";
+            this.Load += new System.EventHandler(this.EditPlayer_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
