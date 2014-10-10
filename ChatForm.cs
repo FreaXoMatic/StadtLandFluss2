@@ -109,6 +109,8 @@ namespace StadtLandFluss
         private void ChatForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             userName = "";
+            receivingClient.Close();
+            
         }
     }
 }
